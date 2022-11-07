@@ -1,0 +1,90 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+p{
+  margin: 20px 0;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked + label .toggle {
+  border-radius: 5px 5px 0 0;
+  background: #f05b55;
+  box-shadow: none;
+  border-bottom: none;
+  color: white;
+}
+
+#toggle:checked + label .toggle:after {
+  border-color: #ffffff transparent;
+  transform: rotate(180deg);
+}
+
+#toggle:checked + label .list {
+  display: inherit;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+}
+
+.toggle {
+  position: relative;
+  width: 150px;
+  padding: 12px 15px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.4s ease-out;
+}
+
+.toggle:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -3px;
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #f05b55 transparent;
+}
+.list {
+  /* Size & position */
+  display: none;
+  position: absolute;
+  width: 150px;
+  margin: 0;
+  padding: 5px;
+  /* Styles */
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: none;
+  border-bottom: none;
+  list-style: none;
+  transition: all 0.4s ease-out;
+  /* Hiding */
+  max-height: 0;
+  overflow: hidden;
+}
+.list li:hover a {
+  color: #f05b55;
+}
+.list li:last-of-type a {
+  border: none;
+}
+.list a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 10px 0;
+  transition: all 0.4s ease-out;
+  border-bottom: 1px solid #e6e8ea;
+}

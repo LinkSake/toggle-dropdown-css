@@ -1,0 +1,18 @@
+#toggle {
+  display: none;
+}
+
+.toggle{
+  width: 100px;
+  cursor: pointer;
+  text-align: center;
+  border: solid 1px black;
+}
+
+.container {
+  display: none;
+}
+
+#toggle:checked + label .container {
+  display: inherit;
+}
